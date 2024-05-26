@@ -93,7 +93,7 @@ export default function Home() {
 
   const firstData = data?.list[0];
 
-  console.log("data", data);
+  console.log("data", data?.city.name);
 
   const uniqueDates = [
     ...new Set(
