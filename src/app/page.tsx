@@ -162,7 +162,7 @@ export default function Home() {
                     <div key={i} 
                       className="flex flex-col justify-between gap-2 items-center text-xs font-semibold">
                         <p className="whitespace-nowrap">{format(parseISO(d.dt_txt), "h:mm a")}</p>
-
+                        
                         {/*<WeatherIcon iconName={d.weather[0].icon}/>*/}
                         <WeatherIcon iconName={getDayOrNightIcon(d.weather[0].icon,d.dt_txt)}/>
                         <p>{convertKelvinToCelsius(d?.main.temp ?? 0)}°</p>
@@ -198,7 +198,7 @@ export default function Home() {
               key={n}
               description={d?.weather[0].description ?? ''}
               weatherIcon={d?.weather[0].icon ?? ''}
-              date={format(parseISO(d?.dt_txt ?? ""), "dd/MM")}
+              date={format(parseISO(d?.dt_txt ?? ""), "dd.MM")}
               day={format(parseISO(d?.dt_txt ?? ""),"EEEE")}
               feels_like={d?.main.feels_like ?? 0}
               temp={d?.main.temp ?? 0}
